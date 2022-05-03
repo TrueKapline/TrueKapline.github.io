@@ -4,40 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <title>HTML Learning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
-<header>
-    <h3><a href="#text">Текст</a></h3>
-    <h3><a href="#formula">Формула</a></h3>
-    <h3><a href="#lists">Списки</a></h3>
-    <h3><a href="#image">Картинка</a></h3>
-    <h3><a href="#form">Форма</a></h3>
-    <h3><a href="#time-table">Расписание</a></h3>
-    <h3><a href="#video">Видео</a></h3>
-    <h3><a href="#map">Карта</a></h3>
-</header>
 <h1>Изучение HTML</h1>
-<section class="segment text">
-    <h2>
-        <a class="main_anchor" name="text" href="#text">Текстовые теги</a>
-    </h2>
-    <p>Для красивого оформления текста разработчики используют в <abbr title="HyperText Markup Language">HTML</abbr>
-       специальные теги,
-       которые выделят текст на фоне остальных, например, текст можно делать <b>полужирным</b>,
-        <i>курсивным</i>,
-        <del>перечёркнутым</del>
-       , <em>подчёркнутым</em> и так далее.
-       При этом ничто не мешает совмещать <b><i>несколько стилей текста</i></b>.
+<section class="segment seg_text">
+    <h2 class="text">Текстовые <span class="word">теги</span></h2>
+    <p class="p_center">Для красивого оформления текста разработчики используют в <abbr
+            title="HyperText Markup Language">HTML</abbr>специальные теги, которые выделят текст на фоне остальных,
+            например, текст можно делать <b>полужирным</b>,<i>курсивным</i>,
+            <del>перечёркнутым</del>,
+            <em>подчёркнутым</em> и так далее. При этом ничто не мешает совмещать <b><i>несколько стилей текста</i></b>.
     </p>
-    <p>С помощью CSS стили текста можно изменять, например, назначить другой шрифт, размер или отступы</p>
-    <p>Подробнее про HTML-теги можно узнать воспользовавшись <a href="https://yandex.ru/"
-                                                                target="_blank">поисковиком</a></p>
+    <p class="p_right">С помощью CSS стили текста можно изменять, например, назначить другой шрифт, размер или
+                       отступы</p>
+    <p class="p_left">Подробнее про HTML-теги можно узнать воспользовавшись
+    <div class="s_search"><a href="https://yandex.ru/"
+                             target="_blank" class="search">поисковиком</a></div>
 </section>
-<section class="segment formula">
-    <h2>
-        <a class="main_anchor" name="formula" href="#formula">Формула</a>
-    </h2>
+<section class="segment seg_formula">
+    <h2 class="formula">Формула</h2>
     <p>HTML также позволяет встраивать формулы. Например, ниже приведена формула теоремы Пифагора</p>
     <math>
         <semantics>
@@ -61,17 +52,15 @@
         </semantics>
     </math>
 </section>
-<section class="segment lists">
-    <h2>
-        <a class="main_anchor" name="lists" href="#lists">Списки</a>
-    </h2>
+<section class="segment seg_lists">
+    <h2 class="lists">Списки</h2>
     <p>Список изучения технологий для фронтэнда:</p>
     <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>ReactJS</li>
-        <li>TypeScript</li>
+        <li class="vk">HTML</li>
+        <li class="in">CSS</li>
+        <li class="fb">JavaScript</li>
+        <li class="wa">ReactJS</li>
+        <li class="tg">TypeScript</li>
     </ul>
     <p>Порядок изучения сторонних направлений для фронтэнда:</p>
     <ol>
@@ -82,34 +71,33 @@
         <li>Архитектура и препроцессоры CSS</li>
     </ol>
 </section>
-<section class="segment image">
-    <h2>
-        <a class="main_anchor" name="image" href="#image">Картинка</a>
-    </h2>
-    <img src="aleksander-rostov-arc-sens.jpg" alt="disco elysium" style="width: 400px">
+<section class="segment seg_img">
+    <h2 class="image">Картинки</h2>
+    <div class="img_row">
+        <img src="aleksander-rostov-arc-sens.jpg" alt="disco elysium sensuality" class="sens" style="width: 400px">
+        <span class="img"></span>
+        <img src="" alt="" class="phys" style="width: 400px">
+    </div>
 </section>
-<section class="segment form">
-    <h2>
-        <a class="main_anchor" name="form" href="#form">Формула</a>
-    </h2>
+<section class="segment seg_form">
+    <h2 class="form">Форма</h2>
     <p>Вы можете связаться с нами через форму ниже для получения подробной информации</p>
     <form action="" method="post">
         <label for="POST-name"></label>
-        <input id="POST-name" type="text" name="name" placeholder="Ваше имя">
+        <input id="POST-name" type="text" name="name" placeholder="Ваше имя" class="name_form">
         <br>
         <label for="POST-number"></label>
-        <input id="POST-number" type="text" name="number" placeholder="Ваш номер">
+        <input id="POST-number" type="text" name="number" placeholder="Ваш номер" class="num_form">
         <br>
         <label for="message"></label>
-        <textarea name="message" id="message" cols="30" rows="10" placeholder="Ваше сообщение"></textarea>
+        <textarea name="message" id="message" cols="25" rows="5" placeholder="Ваше сообщение"
+                  class="text_form"></textarea>
         <br>
-        <input type="submit" value="Отправить">
+        <input type="submit" value="Отправить" class="send_btn">
     </form>
 </section>
-<section class="segment time-table">
-    <h2>
-        <a class="main_anchor" name="time-table" href="#time-table">Расписание</a>
-    </h2>
+<section class="segment seg_table">
+    <h2 class="time-table">Расписание</h2>
     <h3>Числитель</h3>
     <table class="table">
         <tr>
@@ -253,25 +241,21 @@
         </tr>
     </table>
 </section>
-<section class="segment video">
-    <h2>
-        <a class="main_anchor" name="video" href="#video">Видео</a>
-    </h2>
+<section class="segment seg_video">
+    <h2 class="video">Видео</h2>
     <iframe width="600" height="355" src="https://www.youtube.com/embed/ok-plXXHlWw" title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+    <br>
+    <a href="#" class="btn"> Button</a>
 </section>
-<section class="segment map">
-    <h2>
-        <a class="main_anchor" name="map" href="#map">Карта</a>
-    </h2>
+<section class="segment seg_map">
+    <h2 class="map">Карта</h2>
     <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae12431fc542fea2126712b16f620ef435213b242d21bed3c1ec70d81c61d094d&amp;source=constructor"
             width="633" height="535" frameborder="0"></iframe>
-</section>
-<footer>
 
-</footer>
+</section>
 </body>
 
 </html>
